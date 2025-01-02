@@ -32,6 +32,7 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
+                'pylsp',
                 "rust_analyzer",
                 "gopls",
             },
@@ -71,6 +72,20 @@ return {
                         }
                     }
                 end,
+                ["pylsp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pylsp.setup{
+                        settings = {
+                            pylsp = {
+                                plugins = {
+                                    pycodestyle = {
+                                        maxLineLength = 120,
+                                    }
+                                }
+                            }
+                        }
+                    }
+                end
             }
         })
 
