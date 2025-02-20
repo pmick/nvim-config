@@ -30,5 +30,11 @@ return {
                 additional_vim_regex_highlighting = false,
             }
         }
+
+        vim.filetype.add({
+            filename = {
+                Podfile = "ruby"
+            },
+        })
     end
 }
