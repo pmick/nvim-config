@@ -1,6 +1,6 @@
 require("pmick")
 
-vim.lsp.enable({ 'lua_ls', 'ts_ls', 'clangd' })
+vim.lsp.enable({ 'lua_ls', 'ts_ls', 'clangd', 'pylsp' })
 
 vim.diagnostic.config({ virtual_lines = true })
 
